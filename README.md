@@ -10,6 +10,7 @@ Akan datang!!
 
 1. `gettingStarted`
 2. `echo`
+3. `moduleDescription`
 
 # Debugging
 
