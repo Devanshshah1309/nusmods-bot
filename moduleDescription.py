@@ -3,11 +3,10 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler, MessageHandler
 from echo import start, TOKEN
 
-module_code = "CS1101S" # default module_code
-URL = f"http://api.nusmods.com/v2/2022-2023/modules/{module_code}.json"
+URL = "http://api.nusmods.com/v2/2022-2023/modules/"
 
-def getModuleDescription():
-    r = requests.get(URL)
+def getModuleDescription(module_code: str):
+    r = requests.get(f"{URL}{module_code}.json")
     data = r.json()
     return data['description']
 
@@ -17,7 +16,7 @@ async def describe(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await context.bot.send_message(chat_id=update.effective_chat.id, text=f"Please enter a module code along with the describe command!\nFor example, /describe CS1101S")
         return
     module_code = context.args[0]
-    description = getModuleDescription()
+    description = getModuleDescription(module_code)
     await context.bot.send_message(chat_id=update.effective_chat.id, text=f"You have requested for the module description of {module_code}. Here you go!")
     await context.bot.send_message(chat_id=update.effective_chat.id, text=description)
 
