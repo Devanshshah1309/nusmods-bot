@@ -1,6 +1,5 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import ContextTypes
-from describeHandler import describe
 
 async def check(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if context.args == []:

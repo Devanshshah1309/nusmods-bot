@@ -1,8 +1,6 @@
-from telegram import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram import Update
 from telegram.ext import ContextTypes
 from api import getModuleDescription, getModulePrerequisite
-from describeHandler import describe
-from prerequisiteHandler import prerequisite
 
 async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # this is only called when a button is clicked

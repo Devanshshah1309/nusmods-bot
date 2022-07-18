@@ -1,7 +1,7 @@
-from telegram import Update
-from telegram.ext import filters, ApplicationBuilder, ContextTypes, CommandHandler, MessageHandler
+from telegram.ext import filters, ApplicationBuilder, CommandHandler, MessageHandler
 import os
-import echoHandler, startHandler
+from echoHandler import echo
+from startHandler import start
 
 if __name__ == '__main__': # Ensures that this does not run when used to import
     TOKEN = os.getenv("TOKEN")
@@ -9,11 +9,11 @@ if __name__ == '__main__': # Ensures that this does not run when used to import
 
     application = ApplicationBuilder().token(TOKEN).build()
     
-    start_handler = CommandHandler('start', startHandler)
+    start_handler = CommandHandler('start', start)
 
     # filters are used to determine the kind of updates/messages you want to reply to
     # filters are combined using bitwise operators instead of logical operators
-    echo_handler = MessageHandler(filters=filters.TEXT, callback=echoHandler)
+    echo_handler = MessageHandler(filters=filters.TEXT, callback=echo)
     
     application.add_handler(start_handler)
     application.add_handler(echo_handler)
