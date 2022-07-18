@@ -21,10 +21,14 @@ def getModuleDetails(module_code: str, info = None):
     data = r.json()
     if info == None:
         return data
-    return data[info]
+    result = data.get(info)
+    if result == None:
+        return f"Sorry, there does not appear to be any {info} for {module_code}"
+    return result
 
 def getModuleDescription(module_code: str):
     return getModuleDetails(module_code, info="description")
 
 def getModulePrerequisite(module_code: str):
     return getModuleDetails(module_code, info="prerequisite")
+
