@@ -4,7 +4,7 @@ This telegram bot is just a way to explore the python telegram bot API and get t
 
 # What does this bot do?
 
-Akan datang!!
+Help NUS students easily access module information!!
 
 # Order of Bots
 
