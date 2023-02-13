@@ -1,16 +1,12 @@
 # About
 
-This telegram bot is just a way to explore the python telegram bot API and get to know some of the cool features of telegram bots.
+I just made this to learn how to create telegram bots because they seemed cool!
+
+The only relevant bot is the `officialNUSmodsBot` - everything else was just built in the process of trying to learn :)
 
 # What does this bot do?
 
-Help NUS students easily access module information!!
-
-# Order of Bots
-
-1. `gettingStarted`
-2. `echo`
-3. `moduleDescription`
+Help NUS students easily access module information like module code, module description, pre-requisites, etc. without having to open the website :)
 
 # Debugging
 
