@@ -1,14 +1,12 @@
-# About
+<img src="./assets/nusmodsbot.png" width="300px">
 
-I just made this to learn how to create telegram bots because they seemed cool!
+## About
 
-The only relevant bot is the `officialNUSmodsBot` - everything else was just built in the process of trying to learn :)
+Are you tired of opening the [NUSMods website](http://nusmods.com/) to check for module information? Well then, this bot is for you!
 
-# What does this bot do?
+This bot helps you easily access module information like module code, module description, pre-requisites, etc. from your favorite app - telegram!
 
-Help NUS students easily access module information like module code, module description, pre-requisites, etc. without having to open the website :)
-
-# Debugging
+## Debugging
 
 1. When running any of the .py files, if `os.getenv` doesn't seem to work, just copy the variables from your .env file to the program file itself.
 2. Make sure you're using python3 (preferably python 3.10.5)
